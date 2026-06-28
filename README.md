@@ -54,7 +54,7 @@ phishing-tool/
 
 ```bash
 git clone <repo>
-cd phishing-tool
+cd Phish
 pip install -r requirements.txt
 ```
 
