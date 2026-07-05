@@ -1,19 +1,37 @@
-# Phishing Simulation Framework
+# MILP (Man I Love Phishing)
 
-A CLI-based phishing simulation tool built for security awareness training and
-educational red team portfolio purposes.
+A CLI-based phishing simulation tool built as an educational exercise to
+understand how credential-harvesting attacks work mechanically, for security
+awareness training purposes only.
 
 ---
 
-## ⚠️ Legal Disclaimer
+## ⚠️ Legal & Ethical Disclaimer
 
-This tool is intended **strictly for authorized security awareness training**.
+**This project is unmaintained and provided for educational reference only.
+It is not a production tool and should not be deployed against any target
+without explicit, documented, written authorization.**
 
-- Only use against systems and individuals you have **explicit written permission** to test
-- Unauthorized phishing is illegal under computer fraud laws in most jurisdictions
-- The author assumes no liability for misuse
+- This code functionally replicates real credential-phishing infrastructure
+  (page cloning, credential capture, mass email delivery, victim tracking).
+  It carries the same legal weight as any other phishing kit — intent and
+  framing do not change what the code does.
+- Using this against any person, account, or organization without their
+  **explicit prior written consent** is illegal in most jurisdictions under
+  computer fraud, wiretapping, and/or anti-phishing statutes — even a "dummy"
+  personal account you don't have standing authorization to test against.
+- This repo was built solely to study attack mechanics (HTTP form handling,
+  SMTP delivery, session/token tracking) as part of a student portfolio.
+  It has **no evasion, obfuscation, or anti-detection features**, is not
+  supported, and should not be adapted to add any.
+- If you are looking for a real, safe way to run phishing simulations at an
+  organization, use an established, audited platform intended for that
+  purpose (e.g. GoPhish) under proper internal authorization — not this code.
+- The author assumes no liability for any use of this code and does not
+  endorse deploying it against any real target.
 
-See `authorization_template.md` for a sample authorization form.
+See `authorization_template.md` for a sample authorization form if used in a
+sanctioned training context.
 
 ---
 
@@ -54,7 +72,7 @@ phishing-tool/
 
 ```bash
 git clone <repo>
-cd Phish
+cd phishing-tool
 pip install -r requirements.txt
 ```
 
@@ -183,14 +201,3 @@ This lets you trace one person's complete journey through the campaign.
 | `utils.py` | ANSI colors, banner, menu, dual CLI+file logging |
 
 ---
-
-## Roadmap
-
-- [ ] HTTPS support via self-signed cert
-- [ ] Configurable redirect URL per campaign
-- [ ] Plain text email fallback template
-- [ ] Rate limiting between sends
-- [ ] Sender name spoofing
-- [ ] Campaign summary stats (open rate %, click rate %, submission rate %)
-- [ ] PDF report generation
-- [ ] Multi-page cloning
