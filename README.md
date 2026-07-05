@@ -1,4 +1,4 @@
-# MILP (Man I Love Phishing)
+# MILP (Man, I Love Phishing)
 
 A CLI-based phishing simulation tool built as an educational exercise to
 understand how credential-harvesting attacks work mechanically, for security
